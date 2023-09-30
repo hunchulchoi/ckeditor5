@@ -100,7 +100,7 @@ export default class UploadImageCommand extends Command {
 	 */
 	private _uploadImage( file: File, attributes: object, position?: Position ): void {
 		const editor = this.editor;
-		const fileRepository = editor.plugins.get( FileRepository );
+		const fileRepository = editor.plugins.get( 'FileRepository' );
 		const loader = fileRepository.createLoader( file );
 		const imageUtils: ImageUtils = editor.plugins.get( 'ImageUtils' );
 
